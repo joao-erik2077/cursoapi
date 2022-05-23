@@ -1,12 +1,13 @@
 package br.com.joaoerik.cursoapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name="curso")
+@Table(name = "curso")
 public class Curso {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nomecurso;
